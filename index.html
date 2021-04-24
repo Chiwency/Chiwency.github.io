@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>Hexo</title>
+    <title>面向xx编程</title>
     
 <link rel="stylesheet" href="/css/style.css">
 
@@ -21,20 +21,16 @@
         <nav class="header-nav">
             
             <a href="/" class="header-nav-link" >
-                Home
+                首页
             </a>
             
 
             
             <a href="/archives" class="header-nav-link">
-                Archives
+                目录
             </a>
             
 
-            
-            <a href="/tags" class="header-nav-link">
-                Tags
-            </a>
             
 
             
@@ -49,7 +45,7 @@
             <span></span>
         </div>
         <div class="mobile-nav-title">
-            <a href="/" class="mobile-nav-title-link">John Doe's Blog</a>
+            <a href="/" class="mobile-nav-title-link">Chiwency's Blog</a>
         </div>
 
     </div>
@@ -57,19 +53,19 @@
         <ul class="mobile-menu-list">
             <li class="mobile-menu-item">
                 <i class="iconfont icon-home"></i>
-                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/" class="mobile-nav-link">首页</a>
             </li>
             <li class="mobile-menu-item">
                 <i class="iconfont icon-archive"></i>
-                <a href="/archives" class="mobile-nav-link">Archives</a>
+                <a href="/archives" class="mobile-nav-link">目录</a>
             </li>
             <li class="mobile-menu-item">
                 <i class="iconfont icon-tag"></i>
-                <a href="/tags" class="mobile-nav-link">Tags</a>
+                <a href="/tags" class="mobile-nav-link">标签</a>
             </li>
             <li class="mobile-menu-item">
                 <i class="iconfont icon-about"></i>
-                <a href="/about/" class="mobile-nav-link">About</a>
+                <a href="/about/" class="mobile-nav-link">关于</a>
             </li>
         </ul>
     </nav>
@@ -80,52 +76,21 @@
     
         <article class="post-abstract">
             <div class="post-title">
-                <h2><a class="post-title-link" href="/2021/04/23/mongoDB/"></a></h2>
+                <h2><a class="post-title-link" href="/2021/04/24/mongoDB/">MongoDB简介——与MySQL对比</a></h2>
             </div>
             <div class="post-meta">
-                <span class="post-time">2021-04-23</span>
+                <span class="post-time">2021-04-24</span>
                 
             </div>
             <div class="post-content">
                 
-                    <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h3 id="文档数据库"><a href="#文档数据库" class="headerlink" title="文档数据库"></a>文档数据库</h3><p>​    与关系型数据库MySQL区别一, MongDB是文档型数据库，对用户而言，最小的储存单位是 <code>文档(document)</code> ,对应MySQL中的 <code>记录(record)</code> . 而文档的集合储存在 <code>collection</code> 里面，对应MySQL的 <code>表(table)</code> ，<code>collection</code> 的集合就是对应数据库 <code>database</code> 了，这个和MySQL一样，总之储存层次都是 <code>三层</code>. </p>
-<p><img src="../../images/mongoDB_1.png" alt="image-20210423204119564"></p>
-<h3 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h3><p> MongoDB里面的一条记录，即一个<code>document</code>，其实就是一条 <code>JSON</code> 格式的数据。长下面这样：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;_id&quot;</span>: ObjectId(<span class="string">&quot;6082977ca12ab38ba570841d&quot;</span>),    <span class="comment">// document唯一标识</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;wency&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;MongoDB Tutorial&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;content&quot;</span>: <span class="string">&quot;This is a simple tutorial of MongoDB.&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>假定你们对JSON有所了解，这部分不细讲</p>
-</blockquote>
-<p>但是区别就是<code>document</code> 比 <code>JOSN</code> 多了几种数据类型， 比如 <code>date</code> 、<code>float</code> 之类的。  </p>
-
-                
-            </div>
-        </article>
-    
-        <article class="post-abstract">
-            <div class="post-title">
-                <h2><a class="post-title-link" href="/2021/04/22/hello-world/">Hello World</a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">2021-04-22</span>
-                
-            </div>
-            <div class="post-content">
-                
-                    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+                    <p>MongoDB是一个文档型数据库</p>
+                    <div class="read-more">
+                        <a href="/2021/04/24/mongoDB/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
                 
             </div>
         </article>
@@ -142,6 +107,10 @@
 </div>
 <footer class="footer-social">
     
+    <a class="social-link" target="_blank" href="https://github.com/chiwency">
+        <i class="iconfont icon-github"></i>
+    </a>
+    
 
     
 
@@ -154,7 +123,7 @@
             
             2021
             &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
-            <a target="_blank" href="https://github.com/iJinxin">John Doe</a>
+            <a target="_blank" href="https://github.com/chiwency">Chiwency</a>
         </p>
         <p class="theme-info">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
