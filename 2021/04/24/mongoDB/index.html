@@ -12,7 +12,7 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="../../images/mongoDB_1.png" alt="mingoDB_1"></p>
+<p><img src="../images/mongoDB_1.png" alt="mingoDB_1"></p>
 <h2 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h2><p> MongoDB里面的一条记录，即一个<code>document</code>，其实就是一条 <code>JSON</code> 格式的数据。长下面这样：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;_id&quot;</span>: ObjectId(<span class="string">&quot;6082977ca12ab38ba570841d&quot;</span>),    <span class="comment">// document唯一标识</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;wency&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;MongoDB Tutorial&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;content&quot;</span>: <span class="string">&quot;This is a simple tutorial of MongoDB.&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -32,7 +32,7 @@
 <h2 id="ObjectId"><a href="#ObjectId" class="headerlink" title="ObjectId"></a>ObjectId</h2><p>值得一提的是MongoDB内建的类型 <code>ObjectId</code> ，这是专门为 <code>_id</code> 准备的类型，为了保证 <code>_id</code> 的全局唯一性。所以你应该猜出来了，<code>_id</code> 字段就是类似于 <code>MySQL</code> 的主键字段，同一张表内主键字段的值一定是唯一的。同样，在同一个 <code>collection</code> 中，需要保证 <code>_id</code> 的值唯一。 </p>
 <p><code>_id</code> 作为标识某个 <code>document</code> 的字段，其值可以由用户在插入或更新时指定，用户指定的话可以为<strong>任意一种类型</strong>，但是需要保证值的唯一性，如果不唯一，插入或更新时会报错。如果用户插入数据时没有显式指定，就由MongoDB设置，默认的就是 <code>ObjectId</code> 类型。</p>
 <p><code>ObjectId</code> 可以理解为<strong>12</strong>字节的数字，分成一下四个部分：</p>
-<p><img src="../../images/mongoDB_2.png" alt="mongoDB_2"></p>
+<p><img src="../images/mongoDB_2.png" alt="mongoDB_2"></p>
 <ul>
 <li><p>前四个字节是时间戳，单位是秒，是从标准纪元开始算经过的秒数。时间戳在最前面可以按插入时间对插入的数据排序，虽然精度不高，只要秒级，但是对数据的索引很有用，也可以算出数据插入的时间。</p>
 <blockquote>
@@ -56,7 +56,7 @@
 <h2 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h2><p>因为比起MySQL，MongoDB更像是无结构的，所以对MongoDB的增删查改可以更加灵活。你还可以对某个document单独增加或减少字段，具体的CRUD操作本文不会介绍，详情看 <a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/crud/">官方手册</a></p>
 <h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>我们先回顾一下MySQL的索引。</p>
 <p>MySQL的InnoDB和MyISAM引擎使用的都是B+树索引</p>
-<p><img src="../../images/mongoDB_3.png" alt="mongoDB_3" title="1"></p>
+<p><img src="../images/mongoDB_3.png" alt="mongoDB_3" title="1"></p>
 <center>B+树</center>
 
 
@@ -70,7 +70,7 @@
 </blockquote>
 <p>其实重点要突出的是，MongoDB用的是<code>B树索引</code>。</p>
 <p>MongoDB的索引和MyISAM的策略差不多，索引和数据分离，索引内储存到真实数据的地址。</p>
-<p><img src="../../images/mongoDB_4.png" alt="mongoDB_4"></p>
+<p><img src="../images/mongoDB_4.png" alt="mongoDB_4"></p>
 <p>索引项是从小到大排序的，但是真实数据是按插入时间排序的。</p>
 <p>和MySQL一样，MongoDB会自动为主键 <code>_id</code> 创建一个索引，这个索引不能被修改或删除，用户可以根据需要为其他字段也创建索引。</p>
 <p>除了用B树索引，其他和MySQL没什么区别，所以MySQL索引的特性MongoDB也有，比如可以创建联合索引、遵循最左匹配原则等。</p>
